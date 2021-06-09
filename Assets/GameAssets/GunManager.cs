@@ -12,6 +12,7 @@ public class GunManager : MonoBehaviour
 
     private float ARROW_BASE_SPEED = 75.0f;
     private float SHOOT_TIME_DELAY = 0.5f;
+    private bool isShooting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +40,13 @@ public class GunManager : MonoBehaviour
             aim.Normalize();
             aim *= 0.65f;
             crosshair.transform.localPosition = aim;
-            crosshair.SetActive(true);
+            isShooting = true;
+            crosshair.SetActive(isShooting);
         }
         else
         {
-            crosshair.SetActive(false);
+            isShooting = false;
+            crosshair.SetActive(isShooting);
         }
     }
 
@@ -65,9 +68,8 @@ public class GunManager : MonoBehaviour
     {
         while (true)
         {
-            if (Input.GetKey(KeyCode.Space)) // Hard coded maybe use more input system method
+            if (Input.GetKey(KeyCode.Space) || isShooting) // Hard coded maybe use more input system method
             {
-                Debug.Log("Shoot");
                 Shoot();
             }
             yield return new WaitForSeconds(SHOOT_TIME_DELAY);

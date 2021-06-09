@@ -6,10 +6,13 @@ public class Bullet : MonoBehaviour
 {
     public Vector2 velocity = new Vector2(0.0f, 0.0f);
     public GameObject originParent;
+
+    private float bulletDamage;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletDamage = Random.Range(1f, 10f);
     }
 
     // Update is called once per frame
@@ -25,12 +28,14 @@ public class Bullet : MonoBehaviour
         {
             if (hit.collider.gameObject != originParent)
             {
+                hit.collider.gameObject.SendMessage("getHit", bulletDamage, SendMessageOptions.DontRequireReceiver);
                 Destroy(gameObject);
-
                 // ToDo: Add Player Health Check
             }
         }
 
         this.transform.position = newPosition;
     }
+
+    void OnCollisionEnter2D(Collision2D coll) { }
 }
