@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35335577}
   - component: {fileID: 35335576}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,6 +215,8 @@ GameObject:
   - component: {fileID: 43136578}
   - component: {fileID: 43136581}
   - component: {fileID: 43136582}
+  - component: {fileID: 43136584}
+  - component: {fileID: 43136583}
   m_Layer: 0
   m_Name: Agent1
   m_TagString: Untagged
@@ -311,7 +313,7 @@ Transform:
   m_Children:
   - {fileID: 868984236}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &43136581
 Rigidbody2D:
@@ -378,6 +380,49 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   fill: {fileID: 874571116}
+--- !u!114 &43136583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43136577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ac67ac04cace14f8d9c5820ed93eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 234400887}
+  speed: 3
+  nextWaypointDistance: 3
+--- !u!114 &43136584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43136577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!1 &43869994
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43869996}
   - component: {fileID: 43869995}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_19 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87372585}
   - component: {fileID: 87372584}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +760,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -815,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 130485320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +889,7 @@ Transform:
   - {fileID: 2048182348}
   - {fileID: 1116142866}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &132679827
 GameObject:
@@ -1108,7 +1153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 217092829}
   - component: {fileID: 217092830}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_27 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,6 +1224,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &234400880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8114593707868258117, guid: 6f1bffceb7cade941a1aa4b50985e28b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8114593706368375938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &234400883
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234400880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0041917805, y: 0.0013973237}
+  m_Size: {x: 0.30394495, y: 0.4772055}
+  m_Direction: 0
+--- !u!4 &234400887 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8114593707868258121, guid: 6f1bffceb7cade941a1aa4b50985e28b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8114593706368375938}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &240587557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247784264}
   - component: {fileID: 247784263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1428,6 +1501,92 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &326591764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326591766}
+  - component: {fileID: 326591765}
+  m_Layer: 0
+  m_Name: PathFinding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &326591765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326591764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAA4IewZkqGXdwIAAB0FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zmzAQ/SsenWsPYGOgt5Y4Tg/5mLidXLgosBiNhcRIIraT8X/vSoCh7snye7urt29XfBEmdAO5kWqrWPEoCyDfZ8SeybfZSD7Aie6l2LFPGGLeWGEqG0RdzCs1TCLu2zQtazCK5T/EnttgD8FWsFKqelPsIZXaaIRLyjUgpaSx2QKhrxk54c88sSlnPAWRPX3iKfFmFzzmIAyoSWiwiGLf85aruE+ZrxZeFMZBHIZ96ny58JZJlPjr1WbuRa5OK3JO6wYK29RYLvIXq75OuFqsXKjAlvuopWNzyTnTvWJizo1zJKWNbrFfDCgYRQecTH+xRKACtq+M7Wea/lyWGkxvkKLnO6bQyq4u+Sk7f2uqD52+D8pbe1MQrp2urujjf/zcd3SpZP0w3IsOIWQqlh9e6Tmn2kwGMIXvJtKdTUfKD/Sdw1sF4klulWxFgaRRrU1tNQR3499ra2kF+WHEO6k3YNuMvg/zHqZte7i47k8pZ/W7pZz3COy4dI67JQGF0/mFgt0K6b4EolbFHw2/6X66az1xz5Q2SPVdCivvXbbKhpKN88x205pUKgEO7kU3ICg35xcsY25HeMNNrr1h7ql9Vf3lPTc8lpsUB4/xnndDvcjjdVi6ksdH0NVzazgTMIq2xBP6lEohug2bejKk7VpV0nyStm9Z8e9qkbj04rWXJMUy8fxgHcw9GiUQQxjGcQABAHG7xwT2SflLJ7S3B6cmxuIC92z42My2ijZu2wtFj1v2WcupQCZKucsVgHjuSlyVg8Jb8GkWm4KhQzswhgk3cPKVES7zAxTZ9c7Mtbo5GUWzsUpGGvYhjUUykrrPS0Yu5PIXUEsDBBQAAAgIAAA4IeynIctWbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSRZqBhZmBpWWKsaWBoZGZka5BorllqkWqqamFhVGqUWqqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAA4IewZkqGXdwIAAB0FAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAA4IeynIctWbQAAAHgAAAAJACQAAAAAAAAAAAAAAMQCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAfAMAAAAA
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &326591766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326591764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4, y: -3.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &361994849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391314592}
   - component: {fileID: 391314593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColliderTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2591,7 +2750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599634723}
   - component: {fileID: 599634722}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2672,7 +2831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609197123}
   - component: {fileID: 609197122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2753,7 +2912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615803081}
   - component: {fileID: 615803080}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3002,7 +3161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 643365268}
   - component: {fileID: 643365269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3113,7 +3272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &672045106
 GameObject:
@@ -3125,7 +3284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672045107}
   - component: {fileID: 672045108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColliderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3182,7 +3341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 696981148}
   - component: {fileID: 696981147}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_19 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3263,7 +3422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720505639}
   - component: {fileID: 720505640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3404,7 +3563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 730278850}
   - component: {fileID: 730278849}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3653,7 +3812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 770240277}
   - component: {fileID: 770240276}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_19 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3733,7 +3892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 793732676}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3748,7 +3907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793732675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9450631, y: 18.39207, z: -66.07031}
+  m_LocalPosition: {x: -0.7, y: 19.3, z: -66.07031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 615803081}
@@ -3776,7 +3935,7 @@ Transform:
   - {fileID: 696981148}
   - {fileID: 1902029013}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &802733981
 GameObject:
@@ -3956,7 +4115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 816314956}
   - component: {fileID: 816314957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColliderBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4013,7 +4172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 817095115}
   - component: {fileID: 817095114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4603,7 +4762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921419826}
   - component: {fileID: 921419825}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4768,7 +4927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988020976}
   - component: {fileID: 988020975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5101,7 +5260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035542782}
   - component: {fileID: 1035542781}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_26 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5517,7 +5676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1116142866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5551,7 +5710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1130162417}
   - component: {fileID: 1130162418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColliderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5776,7 +5935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159789561}
   - component: {fileID: 1159789560}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6361,7 +6520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318460558}
   - component: {fileID: 1318460557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6442,7 +6601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1342453933}
   - component: {fileID: 1342453932}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6607,7 +6766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360946045}
   - component: {fileID: 1360946044}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_19 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6688,7 +6847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370090634}
   - component: {fileID: 1370090633}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6769,7 +6928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371530766}
   - component: {fileID: 1371530767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6910,7 +7069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1475300975}
   - component: {fileID: 1475300974}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_19 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6991,7 +7150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1477082710}
   - component: {fileID: 1477082709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7313,7 +7472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1586033426}
   - component: {fileID: 1586033425}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7982,7 +8141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729041918}
   - component: {fileID: 1729041917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8147,7 +8306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1781012411}
   - component: {fileID: 1781012410}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_19 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8732,7 +8891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1842332085}
   - component: {fileID: 1842332084}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8813,7 +8972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866868137}
   - component: {fileID: 1866868136}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9063,7 +9222,7 @@ GameObject:
   - component: {fileID: 1902029013}
   - component: {fileID: 1902029015}
   - component: {fileID: 1902029014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9205,7 +9364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1907945649}
   - component: {fileID: 1907945648}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9370,7 +9529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1925402674}
   - component: {fileID: 1925402673}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_26 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9619,7 +9778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990262591}
   - component: {fileID: 1990262590}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet4of4_18 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9784,7 +9943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048182348}
   - component: {fileID: 2048182347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10039,7 +10198,7 @@ Transform:
   - {fileID: 918653937}
   - {fileID: 521918388}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2112357189
 GameObject:
@@ -10051,7 +10210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112357191}
   - component: {fileID: 2112357190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterDetail_Iso_Sheet1of4_51 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10305,7 +10464,7 @@ PrefabInstance:
     - target: {fileID: 8114593707868258121, guid: 6f1bffceb7cade941a1aa4b50985e28b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8114593707868258121, guid: 6f1bffceb7cade941a1aa4b50985e28b,
         type: 3}
@@ -10367,5 +10526,6 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.018763572
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8114593707868258126, guid: 6f1bffceb7cade941a1aa4b50985e28b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6f1bffceb7cade941a1aa4b50985e28b, type: 3}
