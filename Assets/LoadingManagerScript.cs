@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class LoadingManagerScript : MonoBehaviour
@@ -22,7 +23,8 @@ public class LoadingManagerScript : MonoBehaviour
     }
     IEnumerator startAnim()
     {
-        while (true)
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("ExampleScene");
+        while (!asyncOperation.isDone)
         {
             if (loading_dots.Length <= 3)
             {
@@ -34,7 +36,7 @@ public class LoadingManagerScript : MonoBehaviour
             }
 
             loading_text.text = "Loading"+loading_dots;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
